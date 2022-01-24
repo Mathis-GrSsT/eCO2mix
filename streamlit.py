@@ -61,11 +61,9 @@ def accueil():
     image1 = Image.open('Image1.png')
     st.image(image1)
 
-    st.markdown('##')
-    st.markdown("<h1 style='text-align: center; color: black;'>Étude jeu de données : éCO2mix </h1>", unsafe_allow_html=True)
-    st.markdown('##')
-
-    st.markdown("<h5 style='text-align: center; color: black;'>Langage principal : Python  </h5>", unsafe_allow_html=True)
+    st.markdown("<h2 style='text-align: center; color: black;'>éCO2mix</h2>", unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align: center; color: black;'>Les données de la consommation électrique en France</h3>", unsafe_allow_html=True)
+    st.markdown("<h6 style='text-align: center; color: black;'>Langage principal : Python  </h6>", unsafe_allow_html=True)
     st.markdown("<h6 style='text-align: center; color: black;'>Librairies : Pandas, Numpy, Plotly Express  </h6>", unsafe_allow_html=True)
     st.markdown("<h6 style='text-align: center; color: black;'>Outils : Google Collaboratory, VS CodeStreamlit </h6>", unsafe_allow_html=True)
     st.markdown("<h6 style='text-align: center; color: black;'>Application : Streamlit </h6>", unsafe_allow_html=True)
