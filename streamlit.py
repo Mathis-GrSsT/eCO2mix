@@ -60,14 +60,15 @@ def main():
 def accueil():
     image1 = Image.open('Image1.png')
     st.image(image1)
-
     st.markdown("<h2 style='text-align: center; color: black;'>éCO2mix</h2>", unsafe_allow_html=True)
     st.markdown("<h3 style='text-align: center; color: black;'>Les données de la consommation électrique en France</h3>", unsafe_allow_html=True)
     st.markdown("<h6 style='text-align: center; color: black;'>Langage principal : Python  </h6>", unsafe_allow_html=True)
     st.markdown("<h6 style='text-align: center; color: black;'>Librairies : Pandas, Numpy, Plotly Express  </h6>", unsafe_allow_html=True)
-    st.markdown("<h6 style='text-align: center; color: black;'>Outils : Google Collaboratory, VS CodeStreamlit </h6>", unsafe_allow_html=True)
+    st.markdown("<h6 style='text-align: center; color: black;'>Outils : Google Collaboratory, VS Code, Streamlit </h6>", unsafe_allow_html=True)
     st.markdown("<h6 style='text-align: center; color: black;'>Application : Streamlit </h6>", unsafe_allow_html=True)
+    st.markdown("""<a style='display: block; text-align: center;' href="https://opendata.reseaux-energies.fr/explore/dataset/eco2mix-national-tr/">Données en libre accès ici</a>""", unsafe_allow_html=True,)
 
+   
 
 def page1():
     
@@ -183,8 +184,8 @@ def page3():
                 values=0, 
                 names=df_somme_colonne.index, 
                 color_discrete_sequence=px.colors.qualitative.Pastel)
-    fig7.update_layout(width=800,height=800,title = {'text': "Mix production d'énergies",
-            'y':0.95, 
+    fig7.update_layout(width=800,height=800,title = {'text': "Variétés sources d'énergies",
+            'y':0.98, 
             'x':0.5,
             'xanchor': 'center',
             'yanchor': 'top' 
@@ -197,6 +198,9 @@ def page3():
     df_renouvelables_fossiles_tr = df_renouvelables_fossiles.transpose()
     df_renouvelables_fossiles_tr.reset_index(inplace=True)
 
+    st.markdown('##')
+    st.markdown('##')
+
     #Part énergies renouvelables et fossilles 
 
     fig8 = px.pie(df_renouvelables_fossiles_tr, 
@@ -204,8 +208,8 @@ def page3():
                 names='index', 
                 color_discrete_sequence=px.colors.qualitative.Dark2_r)
 
-    fig8.update_layout(width=600,height=600,title = {'text': "Production : mix énergétique",
-            'y':0.95, 
+    fig8.update_layout(width=800,height=800,title = {'text': "Renouvelables et fossiles ",
+            'y':0.98, 
             'x':0.5,
             'xanchor': 'center',
             'yanchor': 'top' 
